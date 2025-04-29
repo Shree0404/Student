@@ -1,13 +1,28 @@
- public class Student {
-    public static void main(String[] args) {
-        // Hardcoded values
-        String name = "Alice";
-        int age = 25;
-        String phoneNumber = "123-456-7890";
++public class Student {
+    String name ;
+    int age ;
+    String dob;
+    
 
-        // Display the values
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-        System.out.println("Phone Number: " + phoneNumber);
+    void details(String n,int a,String d){
+        this.name=n;
+        this.age=a;
+        this.dob=d;
     }
+
+    void display(){
+        System.out.println("Student Name:"+ name);
+        System.out.println("Age:"+age);        
+        System.out.println("Date of Birth:"+dob);        
+
+    }
+
+    public static void main(String[] args) {
+
+        Student s1= new Student();
+        s1.details("Sandy", 21,"24-April-2004");
+
+        s1.display();
+    }
+             
 }
